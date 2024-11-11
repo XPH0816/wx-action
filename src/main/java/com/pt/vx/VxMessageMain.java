@@ -29,7 +29,7 @@ public class  VxMessageMain {
                     messageService.sendMessage(userList.get(i));
                     if(i != userList.size()){
                         try {
-                            Thread.sleep(1234);
+                            Thread.sleep(5000);
                         } catch (InterruptedException e) {
                             //do nothing
                         }

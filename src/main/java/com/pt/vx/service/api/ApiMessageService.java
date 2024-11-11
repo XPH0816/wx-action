@@ -29,13 +29,13 @@ public class ApiMessageService {
 
     static {
         keyDTOS.add(KeyConfig.KEY_QING_HUA);
-        keyDTOS.add(KeyConfig.KEY_DUAN_ZI);
-        keyDTOS.add(KeyConfig.KEY_DU_JI_TANG);
-        keyDTOS.add(KeyConfig.KEY_SENTENCE);
-        keyDTOS.add(KeyConfig.KEY_MI_YU);
-        keyDTOS.add(KeyConfig.KEY_HOROSCOPE);
-        keyDTOS.add(KeyConfig.KEY_HISTORY_TODAY);
-        keyDTOS.add(KeyConfig.KEY_XIN_GUAN);
+        // keyDTOS.add(KeyConfig.KEY_DUAN_ZI);
+        // keyDTOS.add(KeyConfig.KEY_DU_JI_TANG);
+        // keyDTOS.add(KeyConfig.KEY_SENTENCE);
+        // keyDTOS.add(KeyConfig.KEY_MI_YU);
+        // keyDTOS.add(KeyConfig.KEY_HOROSCOPE);
+        // keyDTOS.add(KeyConfig.KEY_HISTORY_TODAY);
+        // keyDTOS.add(KeyConfig.KEY_XIN_GUAN);
     }
     public String getApiMessage(KeyDTO keyDTO, User user){
         String result = null;

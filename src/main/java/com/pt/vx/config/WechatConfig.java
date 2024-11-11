@@ -5,19 +5,20 @@ import com.pt.vx.pojo.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.System;
 
 public class WechatConfig {
     /**
      * 你的微信的APPID
      * appId
      */
-    public static final String VxAppId = "your VxAppId";
+    public static final String VxAppId;
 
     /**
      * 你的微信的密钥
      * appSecret
      */
-    public static final String VxAppSecret = "your VxAppSecret";
+    public static final String VxAppSecret;
 
     public static final List<User> userList = new ArrayList<>();
 
@@ -37,28 +38,27 @@ public class WechatConfig {
      * 注意：每个用户信息的最后一项不需要加逗号！！！
      */
     static {
+        VxAppId = System.getenv("wxAPPID");
+        VxAppSecret = System.getenv("wxSECRET");
+        
         userList.add(getUser(
-                "这个人扫码后的微信号", //扫码关注你的测试号以后，测试平台会出现TA的微信号
-                "微信消息模板ID", //要给这个人发送的模板ID
-                "pt", //咋称呼这个人
-                "江苏省南京市玄武区", //这个人的详细地址
-                "南京", //这个人在的城市
-                new BirthDay(1999,2,15,true,false,"pt生日快乐！！"),
-                new BirthDay(1999,8,11,false,false,"生日快乐哦~~"),
-                new BirthDay(2020,7,8,true,true),
-                new BirthDay(2020,7,8,true,false,"周年快乐！！！")
+                "oIiB66hhtJK7DY8pFhIicQVYMW3g", //扫码关注你的测试号以后，测试平台会出现TA的微信号
+                "CULNVqYFHQS3GuowmN9cjD0cMs-U9xRbk2WgDaCoOXQ", //要给这个人发送的模板ID
+                "BB", //咋称呼这个人
+                new BirthDay(2000,5,25,false,false,"BB 生日快乐！！"),
+                new BirthDay(2001,8,16,false,false,"生日快乐哦~~"),
+                new BirthDay(2021,8,25,false,false,"周年快乐！！！"),
+                new BirthDay(2021,8,25,false,true)
         ));
 
         userList.add(getUser(
-                "这个人扫码后的微信号",
-                "微信消息模板ID",
-                "这个人的称呼",
-                "江苏省南京市玄武区",
-                "南京",
-                new BirthDay(1999,8,11,false,false,"生日快乐哦~~"),
-                new BirthDay(1999,2,15,true,false,"pt生日快乐！！"),
-                new BirthDay(2020,7,8,true,true),
-                new BirthDay(2020,7,8,true,false,"周年快乐！！！")
+                "oIiB66m6yfSm7xdGGz8N8BJ3eoTo",
+                "CULNVqYFHQS3GuowmN9cjD0cMs-U9xRbk2WgDaCoOXQ",
+                "大哥",
+                new BirthDay(2001,8,16,false,false,"生日快乐哦~~"),
+                new BirthDay(2000,5,25,false,false,"宝宝的生日来了"),
+                new BirthDay(2021,8,25,false,false,"周年快乐！！！"),
+                new BirthDay(2021,8,25,false,true)
         ));
 
 

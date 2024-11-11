@@ -6,12 +6,15 @@ name: Java CI with Maven
 on:
   workflow_dispatch:
   schedule:
-    - cron: "8 0 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      wxAPPID: ${{ secrets.WX_APP }}
+      wxSECRET: ${{ secrets.WX_SECRET }}
 
     steps:
     - uses: actions/checkout@v3
