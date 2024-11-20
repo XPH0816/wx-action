@@ -43,7 +43,7 @@ public class WechatConfig {
         
         userList.add(getUser(
                 "oIiB66hhtJK7DY8pFhIicQVYMW3g", //扫码关注你的测试号以后，测试平台会出现TA的微信号
-                "CULNVqYFHQS3GuowmN9cjD0cMs-U9xRbk2WgDaCoOXQ", //要给这个人发送的模板ID
+                "isdRH0eAXVVYkoxFI6odwXSBQ_IE8xKq7qpObvvR0YI", //要给这个人发送的模板ID
                 "BB", //咋称呼这个人
                 new BirthDay(2000,5,25,false,false,"BB 生日快乐！！"),
                 new BirthDay(2001,8,16,false,false,"生日快乐哦~~"),
@@ -53,7 +53,7 @@ public class WechatConfig {
 
         userList.add(getUser(
                 "oIiB66m6yfSm7xdGGz8N8BJ3eoTo",
-                "CULNVqYFHQS3GuowmN9cjD0cMs-U9xRbk2WgDaCoOXQ",
+                "isdRH0eAXVVYkoxFI6odwXSBQ_IE8xKq7qpObvvR0YI",
                 "大哥",
                 new BirthDay(2001,8,16,false,false,"生日快乐哦~~"),
                 new BirthDay(2000,5,25,false,false,"宝宝的生日来了"),

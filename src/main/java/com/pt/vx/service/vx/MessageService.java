@@ -74,11 +74,11 @@ public class MessageService {
         }
 
         CompletableFuture<Void> all = CompletableFuture.allOf(apiInfoList.toArray(new CompletableFuture[apiInfoList.size()]));
-        try {
-            all.get();
-        } catch (Exception e) {
-            log.error("发送消息出现错误，错误为：{}", e.getMessage(), e);
-        }
+            try {
+                all.get();
+            } catch (Exception e) {
+                log.error("发送消息出现错误，错误为：{}", e.getMessage(), e);
+            }
         return map;
     }
 

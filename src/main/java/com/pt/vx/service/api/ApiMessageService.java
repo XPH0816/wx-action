@@ -83,10 +83,25 @@ public class ApiMessageService {
      * @return
      */
     private String getQinghua() {
-        String url = "https://api.uomg.com/api/rand.qinghua?format=json";
-        String s = HttpUtil.get(url);
-        JSONObject jsonObject = JSONUtil.parseObj(s);
-        return jsonObject.getStr("content");
+        String url = "https://api.vvhan.com/api/text/love?type=json";
+        int count = 0;
+        JSONObject jsonObject = null;
+        while (count < MainConfig.httpRetryCount){
+            try{
+                String s = HttpUtil.get(url);
+                log.info("获取情话：{}",s);
+                jsonObject = JSONUtil.parseObj(s);
+                break;
+            } catch (Exception e){
+                count++;
+                try {
+                    Thread.sleep(MainConfig.httpRetryTime * count);
+                } catch (InterruptedException interruptedException) {
+                    interruptedException.printStackTrace();
+                }
+            }
+        }
+        return jsonObject.getJSONObject("data").getStr("content");
     }
 
     /**

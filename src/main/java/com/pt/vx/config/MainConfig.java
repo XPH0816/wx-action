@@ -29,7 +29,7 @@ public class MainConfig {
      * 消息达到分裂的条件
      * 默认每20个字分裂一次
      */
-    public static int splitMessageLength = 20;
+    public static int splitMessageLength = 50;
 
     /**
      * 分裂使用的标记符号
